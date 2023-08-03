@@ -1,20 +1,21 @@
 <template>
-    <label for="">Cédula</label>
+    <label for="">Cécula</label>
     <input v-model="cedula" type="text">
-    
+  
+
     <label for="">Nombre</label>
     <input v-model="nombre" type="text">
 
     <label for="">Apellido</label>
     <input v-model="apellido" type="text">
 
-    <button @click="buscarEstudiante">Buscar</button>
+    <button @click="guardarEstudiante">Guardar</button>
 </template>
 
 <script>
 
 //necesito consumir el metodo de la API
-import { obtenerEstudianteFachada } from "../helpers/EstudianteCliente.js"
+import { ingresarEstudianteFachada } from "../helpers/EstudianteCliente.js"
 
 export default {
     data() {
@@ -25,12 +26,16 @@ export default {
         };
     },
     methods:{
-    async consultarEstudiante(){
-           const data=await obtenerEstudianteFachada(this.cedula);
-            this.nombre=data.nombre;
-            this.apellido=data.apellido;
+    async guardarEstudiante(){
+        const data={
+            cedula:this.cedula,
+            nombre:this.nombre,
+            apellido:this.apellido,
+            provincia:"Pichincha",
+            fechaNacimiento:"2002-04-20T00:00:00"
 
-           console.log(data)
+        }
+        await ingresarEstudianteFachada()
         },
     },
 
