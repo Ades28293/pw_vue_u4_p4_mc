@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <!--<img alt="Vue logo" src="./assets/logo.png">
   <label for="">Consultar</label><br>
    <Estudiante/><br>
    <label for="">Guardar</label><br>
@@ -7,28 +7,34 @@
    <label for="">Actualizar</label><br>
    <ActualizarEstudiante/><br>
    <label for="">Eliminar</label><br>
-   <EliminarEstudiante/>
+   <EliminarEstudiante/>--> 
 
+
+   <NavBarEstudiante/>
+   <router-view/>
+   
 </template>
 
 <script>
-import ActualizarEstudiante from './modules/estudiante/pages/ActualizarEstudiante.vue'
-import Estudiante from './modules/estudiante/pages/ConsultaEstudiante.vue'
-import GuardarEstudianteTest from './modules/estudiante/pages/GuardarEstudianteTest.vue'
-import EliminarEstudiante from './modules/estudiante/pages/EliminarEstudiante.vue'
+//import ActualizarEstudiante from './modules/estudiante/pages/ActualizarEstudiante.vue'
+//import Estudiante from './modules/estudiante/pages/ConsultaEstudiante.vue'
+//import GuardarEstudianteTest from './modules/estudiante/pages/GuardarEstudianteTest.vue'
+//import EliminarEstudiante from './modules/estudiante/pages/EliminarEstudiante.vue'
+import NavBarEstudiante from './modules/estudiante/components/NavBarEstudiante.vue'
 
 export default {
   name: 'App',
   components: {
-    Estudiante,
+   /* Estudiante,
     GuardarEstudianteTest,
     ActualizarEstudiante,
-    EliminarEstudiante
+    EliminarEstudiante,*/
+    NavBarEstudiante
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

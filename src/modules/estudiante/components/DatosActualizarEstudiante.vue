@@ -1,18 +1,39 @@
 <template>
-    <label for="">ID</label>
-    <input v-model="id" type="text">
+    <div class="formulario">
+      <h3>Ingrese el identificador:</h3>
 
-    <label for="">Cedula</label>
-    <input v-model="cedula" type="text">
+      <div>
+        <label id="id1" for="ID">Id:</label>
+        <input v-model="id" type="text" id="ID">
+      </div>
 
-
-    <label for="">Nombre</label>
-    <input v-model="nombre" type="text">
-
-    <label for="">Apellido</label>
-    <input v-model="apellido" type="text">
-
-    <button @click="actualizarEstudiante">Actualizar</button>
+      <div>
+        <label for="cedula">Cédula:</label>
+        <input v-model="cedula" type="text" id="cedula">
+      </div>
+  
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input v-model="nombre" type="text" id="nombre">
+      </div>
+  
+      <div>
+        <label for="apellido">Apellido:</label>
+        <input v-model="apellido" type="text" id="apellido">
+      </div>
+  
+      <div>
+        <label id="fecha1" for="fechaNacimiento">Fecha Nacimiento:</label>
+        <input  v-model="fechaNacimiento" type="text" id="fechaNacimiento">
+      </div>
+  
+      <div>
+        <label for="provincia">Provincia:</label>
+        <input v-model="provincia" type="text" id="provincia">
+      </div>
+  
+      <button @click="actualizarEstudiante">Actualizar</button>
+    </div>
 </template>
 
 <script>
@@ -26,18 +47,20 @@ export default {
             id: null,
             cedula: null,
             nombre: null,
-            apellido: null
+            apellido: null,
+            fechaNacimiento:null,
+            provincia: null
         };
     },
     methods: {
         async actualizarEstudiante() {
             const data = {
-                id: this.id,
+                
                 cedula: this.cedula,
                 nombre: this.nombre,
                 apellido: this.apellido,
-                provincia: "Pichincha",
-                fechaNacimiento: "2002-04-20T00:00:00"
+                provincia:this.provincia,
+            fechaNacimiento:this.fechaNacimiento
 
             }
             await actualizarEstudianteFachada(data, this.id)
@@ -47,4 +70,49 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+ .formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid ;
+  padding: 20px;
+  width: 300px; /* Ajusta el ancho del formulario si lo deseas */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  
+}
+
+#id1{
+    margin-left: 35px;
+}
+
+button:hover {
+  background-color: aqua;
+}
+
+button {
+  width: 150px;
+  height: 25px;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+label {
+  margin-left: 1px;
+}
+
+#fecha1{
+    margin-left: -55px;
+}
+
+input {
+  margin-left: 4px;
+  width: 150px;
+}
+
+/* Agrega un poco de espacio entre los campos del formulario */
+.formulario > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+  </style>
