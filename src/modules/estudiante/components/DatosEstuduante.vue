@@ -36,7 +36,7 @@
   export default {
     data() {
       return {
-        cedula: null,
+        cedula: this.$route.params.cedula,
         nombre: null,
         apellido: null,
         fechaNacimiento: null,
@@ -54,6 +54,19 @@
         console.log(data)
       },
     },
+    mounted(){
+      //obtiene una lista de todos los parametros
+     /*const {cedula}= this.$route.params;
+     console.log(cedula)
+     this.cedula=cedula*/
+     this.consultarEstudiante()
+     console.log(this.$route)
+
+     const prov=this.$route.query.provincia;
+     const {prov1}=this.$route.query;
+
+    // http://localhost:8080/...../estudiantes/156464?ciudad=pichicnha
+    }
   }
   </script>
   

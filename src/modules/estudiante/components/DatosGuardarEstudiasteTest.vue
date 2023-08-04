@@ -18,15 +18,18 @@
   
       <div>
         <label id="fecha1" for="fechaNacimiento">Fecha Nacimiento:</label>
-        <input  v-model="fechaNacimiento" type="text" id="fechaNacimiento">
+        <input  v-model="fechaNacimiento" type="datetime-local" id="fechaNacimiento">
       </div>
   
       <div>
         <label for="provincia">Provincia:</label>
         <input v-model="provincia" type="text" id="provincia">
       </div>
-  
-      <button @click="guardarEstudiante">Guardar</button>
+      
+      <div>
+        <button @click="guardarEstudiante">Guardar</button>
+      </div>
+     
     </div>
 </template>
 
@@ -46,7 +49,7 @@ export default {
         };
     },
     methods:{
-    async guardarEstudiante(){
+     guardarEstudiante(){
         const data={
             cedula:this.cedula,
             nombre:this.nombre,
@@ -55,7 +58,9 @@ export default {
             fechaNacimiento:this.fechaNacimiento
 
         }
-        await ingresarEstudianteFachada(data)
+        alert("Estudiante guardado con éxito");
+        console.log("Estudiante Intertadi"+data)
+         ingresarEstudianteFachada(data)
         },
     },
 
