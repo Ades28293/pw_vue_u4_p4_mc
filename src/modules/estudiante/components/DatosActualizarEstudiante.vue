@@ -24,7 +24,7 @@
   
       <div>
         <label id="fecha1" for="fechaNacimiento">Fecha Nacimiento:</label>
-        <input  v-model="fechaNacimiento" type="text" id="fechaNacimiento">
+        <input  v-model="fechaNacimiento" type="datetime-local" id="fechaNacimiento">
       </div>
   
       <div>
