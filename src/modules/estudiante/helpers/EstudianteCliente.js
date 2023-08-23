@@ -39,7 +39,7 @@ console.log('Axios 2');
 //En el config vamos a enviar todos los datos de cabecera uno de esos es el Authorizacion en el cliente Jv Script 
 //se declara como json-
 const headers={
-    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyNzQ5NTQyLCJleHAiOjE2OTI3NTAxNDJ9.Jm1jALXk7WAZJZHcpu2NeJIhbCRYWEe5IEA4lZdHUtYj_3aWYsOkT2_ZnNsJZQV4ypaA7Pq0xXGpKwAtTEkQ3A",
+    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyODIxNTE5LCJleHAiOjE2OTI4MjIxMTl9.bPUS3-q92Zce9Q-DK9_w2FiatqKdVOVd7qn4EKTp7UZYMdaJ9Vy-t3UKlxSOm5MbFNi6GVrvZjqkBxlq45ixdw",
     "Mensaje":"Valor1"
 }   
 const data= axios.get(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${cedula}`,{headers:headers}).then(r=>r.data);
@@ -51,7 +51,7 @@ return data;
 
   const ingresarEstudiante=(bodyEstudiante)=>{
     const headers={
-        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyNzQ5NTQyLCJleHAiOjE2OTI3NTAxNDJ9.Jm1jALXk7WAZJZHcpu2NeJIhbCRYWEe5IEA4lZdHUtYj_3aWYsOkT2_ZnNsJZQV4ypaA7Pq0xXGpKwAtTEkQ3A",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyODIxNTE5LCJleHAiOjE2OTI4MjIxMTl9.bPUS3-q92Zce9Q-DK9_w2FiatqKdVOVd7qn4EKTp7UZYMdaJ9Vy-t3UKlxSOm5MbFNi6GVrvZjqkBxlq45ixdw",
         "Mensaje":"Valor1"
     }   
 
@@ -61,7 +61,7 @@ return data;
 
  const actualizarEstudiante=(bodyEstudiante,id)=>{
     const headers={
-        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyNzQ5NTQyLCJleHAiOjE2OTI3NTAxNDJ9.Jm1jALXk7WAZJZHcpu2NeJIhbCRYWEe5IEA4lZdHUtYj_3aWYsOkT2_ZnNsJZQV4ypaA7Pq0xXGpKwAtTEkQ3A",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyODIxNTE5LCJleHAiOjE2OTI4MjIxMTl9.bPUS3-q92Zce9Q-DK9_w2FiatqKdVOVd7qn4EKTp7UZYMdaJ9Vy-t3UKlxSOm5MbFNi6GVrvZjqkBxlq45ixdw",
         "Mensaje":"Valor1"
     }   
 
@@ -72,7 +72,7 @@ return data;
  const eliminarEstudiante=(id)=>{
 
     const headers={
-        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyNzQ5NTQyLCJleHAiOjE2OTI3NTAxNDJ9.Jm1jALXk7WAZJZHcpu2NeJIhbCRYWEe5IEA4lZdHUtYj_3aWYsOkT2_ZnNsJZQV4ypaA7Pq0xXGpKwAtTEkQ3A",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNaWNoYWVsIiwiaWF0IjoxNjkyODIxNTE5LCJleHAiOjE2OTI4MjIxMTl9.bPUS3-q92Zce9Q-DK9_w2FiatqKdVOVd7qn4EKTp7UZYMdaJ9Vy-t3UKlxSOm5MbFNi6GVrvZjqkBxlq45ixdw",
         "Mensaje":"Valor1"
     }   
 

@@ -27,7 +27,7 @@
       </div>
       
       <div>
-        <button @click="guardarEstudiante">Guardar</button>
+        <button class="btn btn-outline-primary" @click="guardarEstudiante">Guardar</button>
       </div>
      
     </div>
@@ -74,22 +74,22 @@ export default {
   align-items: center;
   justify-content: center;
   border: 5px solid black;
-  padding: 20px;
-  width: 300px; /* Ajusta el ancho del formulario si lo deseas */
+  padding: 80px;
+  width: 400px; /* Ajusta el ancho del formulario si lo deseas */
   margin: 0 auto; /* Centra el formulario horizontalmente */
 }
-
+/*
 button:hover {
   background-color: aqua;
-}
-
+}*/
+/*
 button {
   width: 150px;
   height: 25px;
   border-radius: 25px;
   margin-top: 25px;
 }
-
+*/
 label {
   margin-left: 1px;
 }
